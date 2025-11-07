@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar bg-body-tertiary" >
+     <div class="container-fluid">
+    <a class="navbar-brand"><strong>MY Journal ♥</strong></a>
+    <form class="d-flex" role="search">
+      <input id="navSearchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button id="navSearchBtn" class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+   </div>
+</nav>
+<!-- textarea and save button -->
+  <div class="main">
+       <div class="texter">
+        <input type="text" id="title" placeholder="Journal title....">
+        <textarea id="entry" placeholder="Write your entry..."></textarea>
+       </div>
+       <button id= "savebtn" type="button" class="btn btn-primary">Save</button>
+  </div>
+
+  <div id="savedEntries" class="d-flex flex-wrap gap-3 p-3 justify-content-center"></div>
+
+  <!-- Journal View Modal -->
+<div class="modal fade" id="entryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="entryModalLabel">Journal Title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="entryModalBody">
+        Journal content will appear here...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<!-- <script src="server.js"></script> -->
+</body>
+</html>
