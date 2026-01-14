@@ -67,37 +67,3 @@ textarea{
 
 
 /*  ---------------------------------------------- */
-/* ===== Force modal scrolling and prevent clipping ===== */
-#entryModal .modal-dialog {
-  max-width: 700px;
-  margin: 1.5rem auto;
-}
-
-#entryModal .modal-content {
-  border-radius: 12px;
-  overflow: visible !important;          /* allow body to scroll */
-  max-height: 85vh !important;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Crucial: let the header/footer stay fixed and body scroll */
-#entryModal .modal-header,
-#entryModal .modal-footer {
-  flex: 0 0 auto;
-}
-
-/* modal body scroll area */
-#entryModal .modal-body {
-  flex: 1 1 auto !important;
-  overflow-y: auto !important;
-  max-height: calc(85vh - 120px) !important; /* leave room for header/footer */
-  white-space: pre-wrap !important;
-  word-break: break-word !important;
-  padding: 1rem 1.25rem !important;
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
-}
-
-/* Visual polish (optional) */
-#entryModal .modal-title { font-weight:600; }
-#entryModal .modal-content { box-shadow: 0 6px 30px rgba(0,0,0,0.12); }
